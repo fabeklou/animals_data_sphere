@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup as bs
 import sqlite3
 
@@ -24,12 +24,10 @@ options.add_argument("--headless")
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 options.add_argument("--disable-gpu")
-driver = webdriver.Chrome(options=options)
 
-driver = webdriver.Chrome(
-    service=Service(ChromeDriverManager().install()),
-    options=options
-)
+service = Service("/usr/bin/chromedriver")
+
+driver = webdriver.Chrome(service=service, options=options)
 
 # ---- Constants ---- #
 
