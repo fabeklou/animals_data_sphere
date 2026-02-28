@@ -7,7 +7,6 @@ import subprocess
 import time
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
