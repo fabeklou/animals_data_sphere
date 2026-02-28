@@ -100,8 +100,8 @@ st.markdown("""
 # Navigation Bar
 
 
-def welcome():
-    st.text("Welcome")
+def about():
+    st.text("About")
 
     st.markdown("---")
 
@@ -230,7 +230,7 @@ def evaluation():
 st.title("[🐕] - Animals Data Sphere")
 
 # Setting up Pages
-p1 = st.Page(welcome, title="Welcome")
+p1 = st.Page(about, title="About")
 p2 = st.Page(scrap_data, title="Scrap data with Selenium & bs4")
 p3 = st.Page(explore_and_download, title="Explore & Download Scraped Data")
 p4 = st.Page(dashboard, title="Get Insight from Data (Dashboard)")
